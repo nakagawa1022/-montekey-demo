@@ -28,6 +28,15 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   // 試作なのでフォームは送信しない。入力チェックだけ通して、その旨を表示する
+  // 会員登録ページのボタンは見た目だけ。押したらその旨を表示する
+  var authStatus = document.getElementById("auth-status");
+  document.querySelectorAll("[data-inert]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (authStatus) authStatus.hidden = false;
+    });
+  });
+
   // （フォームがないページでは何もしない）
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");

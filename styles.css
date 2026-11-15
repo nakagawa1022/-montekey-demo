@@ -507,6 +507,188 @@ select {
   font-family: var(--en); font-size: 12px; color: var(--muted);
 }
 
+/* ---------- 下層ページ共通の部品 ---------- */
+.page-title--sm { font-size: clamp(1.6rem, 4vw, 2rem); }
+.section-compact { padding: clamp(48px, 7vw, 88px) 0; border-top: 1px solid var(--line); }
+.section-memo { padding: clamp(32px, 5vw, 56px) 0 clamp(56px, 8vw, 96px); }
+.section-memo .memo { margin-top: 0; }
+
+.big-lead {
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem); font-weight: 500; line-height: 2;
+  word-break: auto-phrase; text-wrap: pretty;
+}
+
+/* 試作メモ：弟さんに確認してほしい点をページ上に残す */
+.memo {
+  margin-top: 32px; padding: 16px 20px;
+  border: 1.5px dashed var(--ink); border-radius: 14px; background: var(--key-soft);
+  font-size: 13.5px; line-height: 1.8;
+}
+.memo-title { font-size: 12px; font-weight: 700; letter-spacing: .1em; margin-bottom: 4px; }
+
+.cta-band { background: var(--soft); text-align: center; padding: clamp(56px, 8vw, 96px) 0; }
+.cta-band h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 700; line-height: 1.5; }
+.cta-band p { margin-top: 12px; color: var(--ink-2); font-size: 15px; }
+.cta-band .cta { justify-content: center; }
+
+.plan-grid { display: grid; gap: 16px; }
+@media (min-width: 640px) {
+  .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .plan-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.plan { border: 1px solid var(--line); border-radius: 20px; background: #fff; padding: 22px 24px; }
+.plan dt { font-size: 14px; font-weight: 700; }
+.plan dd {
+  display: flex; align-items: baseline; gap: 6px; margin-top: 10px;
+  font-size: 17px; font-weight: 700; line-height: 1;
+}
+.plan dd b { font-family: var(--en); font-weight: 500; font-size: 60px; letter-spacing: -.02em; line-height: 1; }
+.plan-badge {
+  display: inline-block; margin-top: 16px; padding: 6px 14px;
+  border: 1.5px solid var(--ink); border-radius: 999px; background: var(--key);
+  font-size: 13px; font-weight: 700; line-height: 1.6;
+}
+.big-lead + .plan-grid { margin-top: 28px; }
+
+/* 流れ：番号つきの縦の手順 */
+.timeline { margin: 0; padding: 0; list-style: none; counter-reset: tl; }
+.timeline li {
+  counter-increment: tl; position: relative;
+  padding: 3px 0 30px 54px; line-height: 1.8; font-weight: 500;
+}
+.timeline li::before {
+  content: counter(tl);
+  position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--en); font-size: 14px; font-weight: 600;
+  background: var(--key); border: 1.5px solid var(--ink);
+}
+.timeline li::after {
+  content: ""; position: absolute; left: 16px; top: 40px; bottom: 6px;
+  border-left: 2px dashed var(--teal);
+}
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li:last-child::after { display: none; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li {
+  padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; background: #fff;
+  font-size: 14.5px; font-weight: 500; line-height: 1.6;
+}
+.chips + .note { margin-top: 16px; }
+
+.empty {
+  display: grid; gap: 16px; justify-items: center; text-align: center;
+  border: 1.5px dashed #c9c9c3; border-radius: 24px;
+  padding: clamp(40px, 7vw, 80px) 24px; color: var(--ink-2);
+}
+
+/* ---------- 会社概要 ---------- */
+.logo-panel {
+  display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 24px; background: #fff; padding: 20px;
+}
+.logo-panel img { width: 100%; max-width: 300px; }
+
+/* ---------- プライバシーポリシー ---------- */
+.prose { max-width: 760px; }
+.prose p, .prose li { font-size: 15px; line-height: 2; color: var(--ink-2); }
+.prose p + p { margin-top: 12px; }
+.prose h2 {
+  margin: 40px 0 12px; padding-top: 32px; border-top: 1px solid var(--line);
+  font-size: 1.2rem; font-weight: 700; line-height: 1.5;
+}
+.prose .bullets { margin: 12px 0; }
+
+/* ---------- 即レスくん（サービスの色は赤） ---------- */
+.sk-hero, .sk-release { --sk: #b82432; }
+.sk-hero { background: #f2f2f2; padding: clamp(48px, 8vw, 104px) 0; }
+.sk-hero-grid { display: grid; gap: 48px; align-items: center; }
+@media (min-width: 900px) {
+  .sk-hero-grid { grid-template-columns: minmax(0, 1fr) 340px; gap: 64px; }
+}
+/* ロゴ画像の地色（#f2f2f2）と背景をそろえて、余白だけ切り抜く */
+.sk-logo .logo-crop { display: block; position: relative; overflow: hidden; width: 242px; height: 48px; }
+.sk-logo .logo-crop img { position: absolute; max-width: none; width: 284px; height: auto; left: -23px; top: -20px; }
+.sk-title {
+  margin-top: 28px;
+  font-family: var(--jp); font-weight: 700; color: var(--sk);
+  font-size: clamp(2rem, 6.2vw, 3.75rem); line-height: 1.3; letter-spacing: .02em;
+}
+.sk-hero .lead { color: var(--ink); }
+.sk-hero .cta { align-items: center; }
+.btn-sk { background: var(--sk); border-color: var(--sk); color: #fff; }
+.btn-sk:hover { background: var(--ink); border-color: var(--ink); }
+.sk-badge {
+  display: inline-flex; align-items: center; min-height: 54px; padding: 0 22px;
+  border: 1.5px solid var(--sk); border-radius: 999px; background: #fff;
+  color: var(--sk); font-size: 15px; font-weight: 700; line-height: 1.2;
+}
+.sk-dial {
+  display: grid; place-content: center; text-align: center;
+  width: min(100%, 320px); aspect-ratio: 1; margin-inline: auto;
+  border: 10px solid var(--sk); border-radius: 50%; background: #fff;
+  color: var(--sk); font-weight: 700;
+}
+.sk-dial-top, .sk-dial-bottom { font-size: 16px; line-height: 1.4; }
+.sk-dial-num {
+  display: flex; align-items: baseline; justify-content: center; gap: 6px;
+  margin: 6px 0 10px; font-size: 28px; line-height: 1;
+}
+.sk-dial-num b { font-family: var(--en); font-weight: 600; font-size: 128px; letter-spacing: -.04em; line-height: .9; }
+
+.sk-release { background: var(--sk); color: #fff; text-align: center; padding: clamp(64px, 9vw, 112px) 0; }
+.sk-release h2 { font-size: clamp(1.6rem, 4.2vw, 2.5rem); font-weight: 700; line-height: 1.4; }
+.sk-release-sub { margin-top: 20px; font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-weight: 700; }
+.sk-perks { display: grid; gap: 10px; justify-content: center; margin-top: 24px; }
+.sk-perks li {
+  padding: 12px 24px; border: 1px solid rgba(255, 255, 255, .45); border-radius: 12px;
+  background: rgba(255, 255, 255, .12); font-weight: 700; line-height: 1.6;
+}
+.sk-release-note { margin-top: 14px; font-size: 13.5px; opacity: .92; }
+.btn-white { margin-top: 28px; background: #fff; border-color: #fff; color: var(--sk); }
+.btn-white:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* ---------- WeCan BPO ---------- */
+.wc-hero { text-align: center; padding: clamp(48px, 8vw, 104px) 0 clamp(48px, 7vw, 88px); }
+.wc-logo img { height: 72px; width: auto; margin: 0 auto; }
+.wc-title {
+  margin-top: 12px;
+  font-family: var(--jp); font-weight: 700;
+  font-size: clamp(1.7rem, 4.8vw, 3.1rem); line-height: 1.45; letter-spacing: .04em;
+  word-break: keep-all;
+}
+/* 受注側・発注側の切り替え */
+.seg {
+  display: inline-flex; gap: 4px; padding: 4px; margin-top: 36px;
+  border: 1.5px solid var(--ink); border-radius: 999px;
+}
+.seg a {
+  padding: 10px 20px; border-radius: 999px;
+  font-size: 14px; font-weight: 700; line-height: 1.4; text-decoration: none;
+  transition: background-color .2s;
+}
+.seg a[aria-current="page"] { background: var(--ink); color: #fff; }
+.seg a:not([aria-current]):hover { background: var(--key); }
+
+/* ---------- 会員登録（見た目のみ） ---------- */
+.auth { padding: clamp(40px, 7vw, 96px) 0 clamp(56px, 8vw, 96px); }
+.auth-card, .auth .memo { max-width: 440px; margin-inline: auto; }
+.auth-card {
+  border: 1px solid var(--line); border-radius: 24px; background: #fff; text-align: center;
+  padding: clamp(28px, 4vw, 44px);
+}
+.auth-sub { margin-top: 10px; font-size: 14px; color: var(--ink-2); }
+.auth-sub a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; }
+.auth-stack { display: grid; gap: 12px; margin-top: 28px; }
+.auth-stack .btn { width: 100%; }
+.auth-or { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
+.auth-or::before, .auth-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.auth-status {
+  margin-top: 20px; padding: 12px 16px; border-radius: 10px; background: var(--key-soft);
+  font-size: 13.5px; line-height: 1.7;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
