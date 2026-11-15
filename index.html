@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 試作のため検索エンジンに載せない。本番では外す -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>株式会社モンテキー｜MonteKey, Inc.（試作）</title>
+  <meta name="description" content="株式会社モンテキー（MonteKey, Inc.）は、問い合わせフォーム営業の代行、テレアポ代行、営業資料のトラッキングなどで、企業の新規開拓を支援する会社です。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Montserrat:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <p class="demo-bar">これは試作です。文言の一部は仮のもので、お問い合わせフォームは送信されません。</p>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="株式会社モンテキー トップへ">
+        <span class="brand-crop"><img src="assets/logo-montekey.jpg" alt="MonteKey" width="785" height="272"></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">メニュー</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#mission">ミッション</a></li>
+          <li><a href="#company">会社情報</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a class="btn btn-solid btn-sm" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 最初の画面：何の会社かを一言で -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">営業支援 ／ MonteKey, Inc.</p>
+          <h1>
+            <span>BOOST THE</span>
+            <span><span class="mark">CHALLENGER.</span></span>
+          </h1>
+          <p class="lead">問い合わせフォーム営業、テレアポ代行、営業資料の分析。<br class="pc-only">営業に人手をかけられない会社の新規開拓を、小さな予算から支援します。</p>
+          <div class="cta">
+            <a class="btn btn-solid" href="#contact">お問い合わせ</a>
+            <a class="btn btn-ghost" href="#services">サービスを見る</a>
+          </div>
+        </div>
+
+        <ul class="facts" aria-label="数字で見るMonteKey">
+          <li>
+            <p class="fact-num"><b>70</b>社超</p>
+            <p class="fact-cap">SHINOBI MAIL の導入企業。スタートアップから上場企業まで。</p>
+          </li>
+          <li>
+            <p class="fact-num"><b>1</b>架電から</p>
+            <p class="fact-cap">SHINOBI CALL は契約期間の縛りなし。予算に合わせて発注できます。</p>
+          </li>
+          <li>
+            <p class="fact-num">初期費用<b>0</b>円</p>
+            <p class="fact-cap">WeCan BPO は初期費用・固定費なしで始められます。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- サービス -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">SERVICES</p>
+          <h2>サービス</h2>
+          <p class="section-lead">会社の規模や予算、知名度に関係なく使える営業支援を、5つのサービスで提供しています。</p>
+        </header>
+
+        <article class="svc svc-featured">
+          <div class="svc-body">
+            <p class="tag">問い合わせフォーム営業の代行</p>
+            <h3 class="svc-logo svc-logo--mail"><img src="assets/logo-shinobimail.png" alt="SHINOBI MAIL" width="300" height="100"></h3>
+            <p class="svc-desc">問い合わせフォーム営業に特化したBPOサービスです。新規営業にリソースをかけられない企業様の新たな営業チャネルとして、スタートアップから上場企業まで70社を超える企業様にご導入いただいています。</p>
+            <p class="omoi">会社の規模や予算、知名度に関係なく、自社のプロダクトを世に広められる世界にしたい。</p>
+            <p class="svc-links">
+              <a class="link" href="http://shinobimail.com" target="_blank" rel="noopener">サービスサイトへ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+            </p>
+          </div>
+          <div class="svc-visual">
+            <img src="assets/mock-shinobimail.png" alt="SHINOBI MAIL の管理画面" width="1280" height="720" loading="lazy">
+          </div>
+        </article>
+
+        <div class="svc-grid">
+          <article class="svc">
+            <p class="tag">テレアポ代行</p>
+            <h3 class="svc-logo svc-logo--call"><img src="assets/logo-shinobicall.png" alt="SHINOBI CALL" width="500" height="85" loading="lazy"></h3>
+            <p class="svc-desc">契約期間の縛りなく、1架電からご予算に合わせてご発注いただける、完全従量課金型のテレアポ代行サービスです。</p>
+            <p class="omoi">今まではテレアポの外注となると、大きな予算がないと出来なかった。小ロットからテレアポを依頼できるようにしたい。</p>
+            <p class="svc-links">
+              <a class="link" href="https://client.shinobi-call.com/" target="_blank" rel="noopener">サービスサイトへ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+            </p>
+          </article>
+
+          <article class="svc">
+            <p class="tag">営業資料のトラッキング</p>
+            <h3 class="svc-logo svc-logo--kashika"><img src="assets/logo-kashika.png" alt="kashika" width="800" height="288" loading="lazy"></h3>
+            <p class="svc-desc">営業資料が「いつ」「誰に」「どのぐらい」見られたかを可視化する資料トラッキングツールです。送付した資料の閲覧状況を分析でき、いつどのようにフォローすれば良いかを定量的に判断できます。</p>
+            <p class="omoi">営業の生産性をあげて、少ないリソースでも売り上げを最大化したい。</p>
+            <p class="svc-links">
+              <a class="link" href="https://lp.kashika-app.com/" target="_blank" rel="noopener">サービスサイトへ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+            </p>
+          </article>
+
+          <article class="svc">
+            <p class="tag">反響対応の電話代行</p>
+            <h3 class="svc-logo svc-logo--sokures"><span class="logo-crop"><img src="assets/logo-sokureskun.png" alt="即レスくん" width="334" height="106" loading="lazy"></span></h3>
+            <p class="svc-desc">資料請求・お問い合わせが発生してから“5分以内”に架電する、反響対応に特化したサービスです。</p>
+            <p class="svc-links">
+              <a class="link" href="https://www.montekey.co.jp/sokureskun">サービスの詳細へ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            </p>
+          </article>
+
+          <article class="svc">
+            <p class="tag">就労移行支援施設向けの案件獲得代行</p>
+            <h3 class="svc-logo svc-logo--wecan"><img src="assets/logo-wecanbpo.png" alt="WeCan BPO" width="500" height="200" loading="lazy"></h3>
+            <p class="svc-desc">企業の「ノンコア」業務を受注し、全国の就労移行支援施設に再委託する、就労移行支援施設特化型の案件獲得代行サービスです。</p>
+            <p class="omoi">就労移行支援施設が継続して良質な案件を取得できる仕組みを作りたい。</p>
+            <p class="svc-links">
+              <a class="link" href="https://www.montekey.co.jp/wecan-bpo">就労移行支援施設の方へ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+              <a class="link" href="https://www.montekey.co.jp/%E8%A4%87%E8%A3%BD-wecanbpo">発注をご検討の企業様へ<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ミッション -->
+    <section class="mission" id="mission">
+      <div class="container">
+        <p class="label">MISSION</p>
+        <h2>チャレンジできる<wbr>社会の創造。</h2>
+        <p class="mission-body">MonteKeyは選択肢の新たな創造・変換・伝達を通し、<br class="pc-only">精一杯思い通りのチャレンジができる環境を作り出します。</p>
+      </div>
+    </section>
+
+    <!-- 会社情報 -->
+    <section class="section" id="company">
+      <div class="container split">
+        <header class="section-head">
+          <p class="label">COMPANY</p>
+          <h2>会社情報</h2>
+          <p class="stack-links">
+            <a class="link" href="https://www.montekey.co.jp/company">会社概要を見る<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="link" href="recruit.html">採用情報を見る<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </p>
+        </header>
+
+        <dl class="company-dl">
+          <div><dt>社名</dt><dd><span class="nb">株式会社MonteKey</span><span class="nb">（MonteKey, Inc.）</span></dd></div>
+          <div><dt>所在地</dt><dd>〒160-0023<br><span class="nb">東京都新宿区西新宿3丁目2-9</span> <span class="nb">新宿ワシントンビル本館 2F</span></dd></div>
+          <div><dt>代表者</dt><dd>代表取締役 中川雄太</dd></div>
+          <div><dt>設立</dt><dd>2019年6月28日</dd></div>
+          <div><dt>事業内容</dt><dd>求人広告媒体運営事業<br>営業支援事業<br>採用支援事業<br>WEB制作事業</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="section section-soft" id="contact">
+      <div class="container split">
+        <header class="section-head">
+          <p class="label">CONTACT</p>
+          <h2>お問い合わせ</h2>
+          <p class="section-lead">サービスの詳細や料金、導入のご相談など、お気軽にお問い合わせください。</p>
+          <p class="note">ご送信内容は、弊社<a href="https://www.montekey.co.jp/privacy-policy">プライバシーポリシー</a>に沿って取り扱います。</p>
+        </header>
+
+        <form class="form" id="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">お名前<span class="req">必須</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-company">会社名<span class="req">必須</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">メールアドレス<span class="req">必須</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+            </div>
+            <div class="field">
+              <label for="f-tel">電話番号<span class="req">必須</span></label>
+              <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-service">お問い合わせサービス<span class="req">必須</span></label>
+            <select id="f-service" name="service" required>
+              <option value="" selected disabled>選択してください</option>
+              <option>SHINOBI MAIL</option>
+              <option>SHINOBI CALL</option>
+              <option>kashika</option>
+              <option>即レスくん</option>
+              <option>WeCan BPO</option>
+              <option>採用について</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">お問い合わせ内容<span class="req">必須</span></label>
+            <textarea id="f-message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-solid" type="submit">送信する</button>
+            <p class="form-status" id="form-status" role="status" hidden>試作のため送信されていません。本番では、今のフォームと同じ宛先に届くようにつなぎます。</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand-crop"><img src="assets/logo-montekey.jpg" alt="MonteKey" width="785" height="272" loading="lazy"></span>
+          <p class="footer-addr">株式会社MonteKey<br>〒160-0023 東京都新宿区西新宿3丁目2-9<br>新宿ワシントンビル本館 2F</p>
+        </div>
+        <nav aria-label="サービス">
+          <p class="footer-title">SERVICES</p>
+          <ul>
+            <li><a href="http://shinobimail.com" target="_blank" rel="noopener">SHINOBI MAIL</a></li>
+            <li><a href="https://client.shinobi-call.com/" target="_blank" rel="noopener">SHINOBI CALL</a></li>
+            <li><a href="https://lp.kashika-app.com/" target="_blank" rel="noopener">kashika</a></li>
+            <li><a href="https://www.montekey.co.jp/sokureskun">即レスくん</a></li>
+            <li><a href="https://www.montekey.co.jp/wecan-bpo">WeCan BPO</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="会社">
+          <p class="footer-title">COMPANY</p>
+          <ul>
+            <li><a href="https://www.montekey.co.jp/company">会社概要</a></li>
+            <li><a href="recruit.html">採用情報</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="https://www.montekey.co.jp/privacy-policy">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">© 2026 MonteKey, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
